@@ -4,6 +4,7 @@ import userRouter from './routes/userRoutes.js'
 import connectDB from './config/db.js'; 
 import uploadRouter from './routes/uploadRoutes.js'
 import productRoutes from './routes/productRoutes.js'
+import OrderRouter from './routes/orderRoutes.js'
 
 dotenv.config();
 const app = express()
@@ -29,6 +30,9 @@ app.use('/api/upload', uploadRouter);
 
 //product routes
 app.use('/api/product', productRoutes)
+
+//Order routes
+app.use('/api/orders', OrderRouter);
 
 // Start the server
 app.listen(port, () => {

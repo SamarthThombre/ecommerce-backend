@@ -16,13 +16,6 @@ const productSchema = new mongoose.Schema(
       public_id: { type: String }, 
     },
 
-    rating: { type: Number, default: 0 },
-    numReviews: { type: Number, default: 0 },
-    reviews: {
-      type: [mongoose.Schema.Types.ObjectId],
-      ref: 'Reviews',
-    },
-
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
