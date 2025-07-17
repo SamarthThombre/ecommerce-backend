@@ -1,0 +1,213 @@
+ecommerce-backend/
+├── config/
+│   └── db.js              # MongoDB connection     ✅🧪
+│   └── cloudinary.js      # Cloudinary config      ✅ 🧪
+├── controllers/
+│   ├── userController.js                           ✅🧪
+│   ├── productController.js                        ✅🧪
+│   ├── orderController.js
+│   ├── reviewController.js
+|   └── uploadController.js                          ✅🧪        
+├── models/
+│   ├── User.js                                     ✅🧪
+│   ├── Product.js                                  ✅🧪
+│   ├── Order.js
+│   └── Review.js
+│   
+├── routes/
+│   ├── authRoutes.js                              
+│   ├── userRoutes.js                               ✅🧪
+|   ├── uploadRoute                                 ✅🧪    
+│   ├── productRoutes.js                            ✅🧪
+│   └── reviewRoutes.js
+|
+├── middlewares
+│   ├── authMiddleware.js                           ✅🧪
+│   ├── errorMiddleware.js  
+│   └── uploadMiddleware.js                         ✅🧪               
+├── utils/
+│   ├── generateToken.js                            ✅🧪
+│   ├── sendEmail.js
+│   └── slugify.js
+├── .env
+├── server.js              # Entry point            ✅🧪
+├── package.json
+└── README.md
+
+
+
+🛒 Customer (User-Side) Features
+🔹 Authentication
+Register / Login / Logout
+
+JWT-based auth
+
+Forgot password (via email reset link)
+
+OAuth Login (Google/GitHub) – optional
+
+🔹 Product Browsing
+Product listing with pagination
+
+View by categories/tags
+
+Search bar (by name, description, category)
+
+Sorting (Price low–high, rating, new–old)
+
+Filters (Price range, brands, availability)
+
+🔹 Product Details Page
+Multiple product images (gallery)
+
+Title, description, price, stock status
+
+Star ratings and user reviews
+
+Quantity selector
+
+Add to cart / Wishlist / Compare
+
+🔹 Cart & Checkout
+Cart page with items, quantities, subtotals
+
+Update quantity or remove item
+
+Guest cart (stored in localStorage/session)
+
+Shipping details form
+
+Payment options: Stripe / Cash on Delivery
+
+Order confirmation page
+
+🔹 Order History
+View past orders
+
+Track order status (Pending → Shipped → Delivered)
+
+Download invoice (PDF)
+
+🔹 Account Dashboard
+Edit profile info and password
+
+View saved items/wishlist
+
+Manage addresses (billing/shipping)
+
+Delete account (soft/hard)
+
+🧑‍💼 Admin (Dashboard) Features
+🔸 Authentication
+Admin-only login route
+
+Role-based access (admin / staff)
+
+🔸 Product Management
+Add/edit/delete products
+
+Upload product images (Cloudinary)
+
+Manage categories/tags/brands
+
+Track stock quantity
+
+Mark items as featured/sale/new
+
+🔸 Order Management
+View all orders
+
+Change order status (Processing, Shipped, Delivered, Cancelled)
+
+Filter/sort by date, customer, status
+
+View payment success/failure
+
+🔸 User Management
+View all users
+
+Ban/suspend users
+
+Upgrade to admin
+
+🔸 Review Moderation
+View/delete inappropriate reviews
+
+Approve reviews manually (optional)
+
+🔸 Coupons & Discounts
+Create % or fixed-amount discount codes
+
+Set expiration, min order amount, usage limits
+
+Apply on checkout
+
+🔸 Sales Analytics
+Revenue chart by day/week/month
+
+Top-selling products
+
+User growth trends
+
+Low stock alerts
+
+🧠 System-Level Features (All-Around)
+🛡️ Security
+JWT + bcrypt for auth
+
+Rate limiting
+
+Helmet & cors
+
+CSRF protection (optional)
+
+Secure payment API with Stripe
+
+📩 Email Services
+Email confirmation on signup
+
+Order confirmation emails
+
+Password reset
+
+Newsletter opt-in
+
+📱 Responsive & Mobile Friendly
+Fully responsive UI (Tailwind + Flex/Grid)
+
+PWA support (Add to home screen)
+
+Dark mode toggle
+
+🌍 SEO & Performance
+SEO tags for products and categories
+
+Sitemap generation
+
+Lazy load images
+
+Page caching (Redis optional)
+
+☁️ Infrastructure & DevOps
+Dockerized backend/frontend
+
+.env config separation
+
+GitHub Actions or other CI/CD
+
+Logging (Winston or Morgan)
+
+Database backup scripts (MongoDump)
+
+🧩 Optional & Advanced (Boss-Level)
+💬 Live Chat (e.g., Socket.io or Tawk.to)
+
+🔔 Notifications (toast, email, or push)
+
+💼 Multi-vendor marketplace (separate logins for sellers)
+
+📲 Mobile App with React Native
+
+🗃️ Product import/export via CSV
+
+🌐 Multi-language support (i18n)
