@@ -1,15 +1,15 @@
 import express from 'express';
 import { createOrder,getMyOrders,updateOrderToPaid,updateOrderToDelivered } from '../controllers/orderController.js';
-import { protect } from '../middleware/authMiddleware.js';
+import { protect, admin } from '../middleware/authMiddleware.js';
 
 const OrderRouter = express.Router();
 
-router.post('/', protect, createOrder);
+OrderRouter.post('/order', protect,admin, createOrder);
 
-router.get('/myorders', protect, getMyOrders);
+OrderRouter.get('/myorders', protect, getMyOrders);
 
-router.put('/:id/pay', protect, updateOrderToPaid);          
+OrderRouter.put('/:id/pay', protect, updateOrderToPaid);          
 
-router.put('/:id/deliver', protect, admin, updateOrderToDelivered);
+OrderRouter.put('/:id/deliver', protect, admin, updateOrderToDelivered);
 
 export default OrderRouter;
