@@ -10,7 +10,7 @@ productRoutes.get("/test", (req, res) => {
   res.send("Products apt working fine");
 })
 
-productRoutes.get("/list",admin, listProducts);
+productRoutes.get("/list", listProducts);
 
 productRoutes.get("/list/:id", listProductsbyid);
 

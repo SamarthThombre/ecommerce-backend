@@ -5,10 +5,18 @@ import connectDB from './config/db.js';
 import uploadRouter from './routes/uploadRoutes.js'
 import productRoutes from './routes/productRoutes.js'
 import OrderRouter from './routes/orderRoutes.js'
+import cors from 'cors'
 
 dotenv.config();
 const app = express()
 const port = process.env.PORT || 5000
+
+// Middleware to enable CORS
+app.use(cors({
+  origin: 'http://localhost:5173', // Adjust this to your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // Allow credentials if needed
+}));
 
 //testing server
 app.get('/', (req, res) => {
