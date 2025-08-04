@@ -6,8 +6,8 @@ This is the backend for a full-stack e-commerce application built using the MERN
 **Getting Started**
 
 1. Clone the repository:
-   git clone https://github.com/your-username/your-backend-repo.git
-   cd your-backend-repo
+   git clone https://github.com/SamarthThombre/ecommerce-backend.git
+   cd ecommerce-backend
 
 2. Install dependencies:
    npm install
